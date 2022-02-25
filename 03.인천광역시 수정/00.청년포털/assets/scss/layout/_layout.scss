@@ -1,0 +1,474 @@
+
+.flex {
+  display: flex;
+}
+
+.flex-all-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+$pos-option: (
+  poa-y-center: (
+    top: 50%,
+    transform: translateY(-50%),
+  ),
+  poa-x-center: (
+    left: 50%,
+    transform: translateX(-50%),
+  ),
+  poa-all-center: (
+    top: 50%,
+    left: 50%,
+    transform: translate(-50%, -50%),
+  ),
+);
+
+@each $key, $value in $pos-option {
+  .#{$key} {
+    position: relative;
+  }
+  .#{$key} > div {
+    position: absolute;
+    top: map-get($value, top);
+    left: map-get($value, left);
+    transform: map-get($value, transform);
+  }
+}
+
+$text-option: (
+  text-left: (
+    option: left,
+  ),
+  text-right: (
+    option: right,
+  ),
+  text-center: (
+    option: center,
+  ),
+);
+
+@each $key, $value in $text-option {
+  .#{$key} {
+    text-align: map-get($value, option)!important;
+  }
+}
+
+$flex-culumn: (
+  flex-w50: (
+    option: 50%,
+  ),
+  flex-w33: (
+    option: 33%,
+  ),
+  flex-w20: (
+    option: 20%,
+  ),
+);
+
+@each $key, $value in $flex-culumn {
+  .#{$key} {
+    display: flex;
+    margin: 0 -0.625rem;
+  }
+  .#{$key} > * {
+    flex: 1 1 map-get($value, option);
+    max-width: map-get($value, option);
+    margin: 0 .625rem;
+  }
+}
+
+$flex-al-option: (
+  flex-al-center: (
+    option: center,
+  ),
+  flex-al-start: (
+    option: flex-start,
+  ),
+  flex-al-end: (
+    option: flex-end,
+  ),
+);
+
+$flex-jc-option: (
+  flex-jc-around: (
+    option: space-around,
+  ),
+  flex-jc-bt: (
+    option: space-between,
+  ),
+);
+
+@each $key, $value in $flex-al-option {
+  .#{$key} {
+    display: flex;
+    align-items: map-get($value, option);
+  }
+}
+
+@each $key, $value in $flex-jc-option {
+  .#{$key} {
+    display: flex !important;
+    justify-content: map-get($value, option);
+  }
+}
+
+// location
+.content-location {
+  display: block;
+  position: relative;
+  list-style: none;
+  padding: .9375rem 0;
+  background: #f3f4f6;
+
+  .content-location-inner {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+
+    > ul {
+      display: block;
+      float: right;
+
+      > li {
+        color: #666;
+        float: left;
+        list-style: none;
+        margin-right: .5rem;
+        line-height: 1.4;
+        font-size: 1.1rem;
+
+        &:after {
+          color: #666;
+          content: ">";
+          display: inline-block;
+          padding-left: .5rem;
+        }
+
+        &.last {
+          &:after {
+            display: none;
+          }
+
+          text-decoration: underline;
+          font-weight: 500;
+          color: #333;
+        }
+      }
+
+      &:after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+    }
+  }
+}
+
+// sub-menu
+.sub-lnb {
+  display: inline-block;
+  margin: 0;
+  margin-top: 2.6875rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  >li{
+    overflow: hidden;
+    text-align: right;
+    float: left;
+    width: 12.3694rem;
+    border: .0625rem solid #e8e8e8;
+    box-sizing: border-box;
+    text-align: center;
+
+    a{
+      display: block;
+      vertical-align: middle;
+      padding: 1.525rem 0;
+      color: #606060;
+      letter-spacing: 0;
+      line-height: .875rem;
+      font-size: 1.0625rem;
+      font-weight: 600;
+      color: #565656;
+      transition: all 0.7s;
+      text-decoration: none;
+    }
+  }
+}
+.sub-lnb > li a:hover {
+  color: #fff;
+  background: #0055a2;
+}
+.sub-lnb > li.on {
+  color: #fff;
+  background: #0055a2;
+}
+.sub-lnb > li.on > a {
+  color: #fff;
+  background: #0055a2;
+  text-decoration: none;
+}
+
+
+// 개인정보처리방침,이메일무단수집,저작권정책
+.com-page {
+  background: #f3f3f3;
+  padding-top: 6.25rem;
+  padding-bottom: 9.4375rem;
+  font-size: 16px;
+  &.bg-fff {
+    background: #fff;
+  }
+  &.pt-sm {
+    padding-top: 4.25em;
+  }
+  &__left {
+    opacity: 1;
+  }
+  &__right {
+    opacity: 1;
+    width: calc(74.625em - 14.375em);
+    &-tit {
+      opacity: 1;
+      padding-bottom: 0.8125em;
+      border-bottom: 0.125em solid #ddd;
+    }
+    ul {
+      position: relative;
+      opacity: 1;
+      display: flex;
+      padding-left: 1.875em;
+
+      @include make-after {
+        width: 0.5em;
+        height: 0.5em;
+        background: #0055a2;
+        position: absolute;
+        left: 0;
+        @include poa-y-center;
+        top: 57% !important;
+      }
+
+      li {
+        position: relative;
+
+        &:last-of-type {
+          @include make-after {
+            display: none;
+          }
+        }
+
+        @include make-after {
+          @include poa-y-center;
+          right: -0.9375em;
+          width: 0.3125em;
+          height: 0.3125em;
+          border-top: 3px solid #979797;
+          border-right: 3px solid #979797;
+          display: inline-block;
+          transform: rotate(45deg);
+        }
+
+        opacity: 1;
+        color: #565656;
+        margin-right: 1.875em;
+        font-size: 1.25em;
+        font-weight: 500;
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+//시험신청 left menu
+.left-menu {
+  opacity: 1;
+  width: 280px;
+  /* margin-top: 66px; */
+  padding: 0 40px;
+  padding-top: 66px;
+  /* position: fixed; */
+  top: 80px;
+  bottom: 0;
+  border-right: 1px solid #DDDDDD;
+  flex: 0 0 280px;
+  height: 100vh;
+  &__list {
+    opacity: 1;
+  }
+  &__tit {
+    opacity: 1;
+    /* height: 2em; */
+    font-size: 1.625em;
+    font-weight: 600;
+    padding-bottom: 0.75em;
+    border-bottom: 1px solid #000;
+  }
+  &__item {
+    opacity: 1;
+    &.is-active {
+      opacity: 1;
+      .left-menu__sub-list {
+        display: block;
+        padding: 0.625em;
+        background: #fafafa;
+        opacity: 1;
+      }
+
+      .left-menu__link::after {
+        top: 60%;
+        transform: rotate(315deg);
+      }
+    }
+  }
+  &__link {
+    position: relative;
+    opacity: 1;
+    display: inline-block;
+    height: 3.125em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* padding-left: .6875em; */
+    border-bottom: 0.125em solid #eee;
+    color: #333333;
+    font-size: 1.1625em;
+    font-weight: 500;
+
+    @include make-after {
+      width: 0.3125em;
+      height: 0.3125em;
+      border-top: 3px solid #979797;
+      border-right: 3px solid #979797;
+      display: inline-block;
+      -webkit-transform: rotate(135deg);
+      transform: rotate(135deg);
+      position: absolute;
+      right: 1.875em;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      top: 50%;
+      margin-top: -0.4375em;
+    }
+
+    &:hover {
+      color: #0055a2;
+    }
+  }
+  &__sub-list {
+    display: none;
+  }
+  &__sub-item {
+    opacity: 1;
+    margin-bottom: 0.65em;
+  }
+  &__sub-link {
+    opacity: 1;
+    font-size: 1.03rem;
+    &:hover {
+      @extend %link-hover;
+    }
+
+    &.is-active {
+      font-size: 1.0375em;
+      color: #0055a2;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}
+
+// section head, body
+.section-footer{
+  padding-bottom: 2rem;
+}
+.section-wrap {
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: .625rem 1.25rem;
+  border-radius: 10px;
+  @extend %hover-shadow;
+}
+.section-head {
+  display: block;
+  position: relative;
+  padding: 1.25rem 0;
+  border-bottom: .0625rem solid #333333;
+  margin-top: 1rem;
+  h4 {
+    padding-left: 2.5rem;
+    position: relative;
+
+    @include make-after {
+      width: 1.625rem;
+      height: 1.375rem;
+      @include bg-url("img", "blt-h4.png", "cover");
+      @include poa-y-center;
+      left: 0;
+    }
+  }
+}
+.section-body {
+  .list-table th {
+    font-size: 1.1rem;
+  }
+  .table-h {
+    max-height: 17rem;
+    overflow-y: scroll;
+    border-bottom: 1px solid #aaa;
+  }
+}
+
+// 항목이없는경우
+.empty {
+  margin-top: 1rem;
+  padding: 2rem 0;
+  background: #eee;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 1.3em;
+  }
+}
+
+// 신청 안내 및 동의
+.pre.auto {
+  padding: 1.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 300px;
+  line-height: 1.5;
+  background: #f5f5f5;
+
+  .txt-wrap .txts {
+    font-size: 1.3rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 1.6;
+  }
+}
+
+.agree-wrap{
+  >div>div{
+    display: flex; align-items: center;
+  }
+  input[type="checkbox"]{
+    width: 1.3rem; height: 1.3rem; margin-right: .5rem;
+  }
+  padding: 2rem;
+  border: 1px solid #aaa;
+  background: #f7f7f7;
+  margin-top: 2rem;
+}

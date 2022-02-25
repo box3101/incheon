@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minim
+        um-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/ui.css">
+  <script src="../js/jquery.js"></script>
+
+  <title>Document</title>
+  <style>
+    figure div{display: inline-block; width: 50px;height: 50px;background: #000;}
+    .flex{display: flex;}
+    body {
+      min-height: 3000px;
+    }
+
+    .content p {
+      margin-bottom: 5px;
+    }
+
+    .content span.red {
+      color: darkred;
+      font-size: 18px;
+    }
+    .sub-content{
+      padding: 5px;
+      color: #000;
+      padding-left: 10px;
+    }
+    .sub-content .head {
+      background: rgb(191, 227, 241);
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+
+    .content span.blue {
+      color: darkblue;
+      font-size: 18px;
+    }
+
+    .mt10 {
+      margin-top: 10px;
+    }
+
+    .mr10 {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="masterTitle">
+    Incheon Style Guide
+  </h1>
+  <div class="guide">
+    <section>
+      <h2><span class="number">1.</span><span class="text">SCROLL JQUERY</span></h2>
+      <div class="content colors">
+        <p class="txt">
+          <span class="blue">1.scrollHeight</span> = $("body").height() = <span class="red">엘리먼트의 높이</span>
+        </p>
+        <p>
+          <span class="blue">2.scrollRealHeight</span> = (scrollHeight - $(window).height()); = <span class="red">스크롤할
+            실제
+            거리</span>
+        </p>
+        <p>
+          <span class="blue">3.winScrollTop</span> = $(window).scrollTop() = <span class="red">스크롤바의 상단 위치</span>
+        </p>
+        <p>
+          <span class="blue">4.scrollPercent</span> (winScrollTop / scrollRealHeight) * 100 = <span class="red">백분율 (비율
+            x
+            100(%))</span>
+        </p>
+        <p>
+          <span class="blue">5.textPercent</span> = Math.floor(scrollPercent) = <span class="red">소수점 버리기</span>
+        </p>
+        <p>
+          <span class="blue">6.onTop</span> = $(document).height() - $(window).height() - $('.footer').height(); = <span class="red">스크롤이 문서하단에 도착했는지 계산</span>
+        </p>
+        <p>
+          <p class="log mt10">
+
+          </p>
+          <script>
+            $(function () {
+
+              var scrollHeight = $('body').height(); //스크롤 거리를 구합니다
+              var scrollRealHeight = (scrollHeight - $(window).height()); //스크롤할 실제 거리를 구합니다
+              var winScrollTop = $(window).scrollTop() + 100; //스크롤바의 상단 위치를 구합니다
+              var scrollPercent = (winScrollTop / scrollRealHeight) * 100; //백분율을 구합니다
+              var textPercent = Math.floor(scrollPercent); //텍스트에 삽입될 값은 소수점을 버려줍니다
+              var onTop = $(document).height() - $(window).height() - $('.footer').height();
+
+              $(".log").append('<span class="mr10"> 1. ' + $("body").height() + '</span>');
+              $(".log").append('<span class="mr10"> 2. ' + (scrollHeight - $(window).height()) + '</span>');
+              $(".log").append('<span class="mr10"> 3. ' + winScrollTop + '</span>');
+              $(".log").append('<span class="mr10"> 4. ' + (winScrollTop / scrollRealHeight) * 100 + '</span>');
+              $(".log").append('<span class="mr10"> 5. ' + Math.floor(scrollPercent) + '</span>');
+              $(".log").append('<span class="mr10"> 5. ' + onTop + '</span>');
+
+            });
+          </script>
+        </p>
+      </div>
+
+      <div class="sub-content content">
+        <div class="head">
+          ♠ INFINITE SCROLL
+        </div>
+        <div>
+          <p class="txt">
+            <article class="sc_infinity">
+              <ul class="list flex" >
+                <li>
+                  <figure>
+                    <div></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div></div>
+                  </figure>
+                </li>
+                <li>
+                  <figure>
+                    <div></div>
+                  </figure>
+                </li>
+              </ul>
+            </article>
+          </p>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <h2><span class="number">1.</span><span class="text">FUNCTION</span></h2>
+      <div class="content">
+        <p>
+          <span class="blue">render</span> : 텍스트 값(매개변수) == function render(textPercent,scrollPercent)
+        </p>
+        <p>
+          <span class="blue">init</span> : 초기화함수
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="footer">
+  </div>
+</body>
+
+</html>

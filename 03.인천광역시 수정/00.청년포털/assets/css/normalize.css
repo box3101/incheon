@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* =================== base =================== */
+html, body, a, abbr, address, area, article, aside, audio, b, base, bdi, bdo, blockquote, button, canvas, caption, center, circle, cite, clipPath, code, col, colgroup, cursor, data, datalist, dd, defs, del, desc, details, dfn, dialog, div, dl, dt, ellipse, em, embed, fieldset, figcaption, figure, filter, footer, foreignObject, form, g, h1, h2, h3, h4, h5, h6, hatch, hatchpath, head, header, hgroup, i, iframe, image, img, input, ins, kbd, keygen, label, legend, li, line, link, main, map, mark, marker, mask, menu, menuitem, mesh, meshpatch, meshrow, nav, object, ol, optgroup, option, output, p, param, path, pattern, picture, pre, progress, q, rb, rect, rp, rt, rtc, ruby, s, samp, section, select, set, small, source, span, strike, strong, sub, summary, svg, symbol, sup, table, tbody, td, template, text, textarea, textPath, tfoot, th, thead, time, title, tr, tspan, u, ul, use, video, view, wbr { margin: 0; padding: 0; border: 0; line-height: 1.15; vertical-align: baseline; -webkit-box-sizing: border-box; box-sizing: border-box; font-family: "notoserif", serif; letter-spacing: -0.04em; stroke-width: 0; word-break: break-all; font-family: 'Montserrat' , 'gmarket', sans-serif; }
+
+html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; font-size: 16px; scroll-behavior: smooth; }
+
+a { outline: 0; background-color: transparent; text-decoration: none; color: #000000; cursor: pointer; }
+
+ol, ul, dl { list-style: none; }
+
+select { padding: 5px 10px; }
+
+/* ie 화살표 제거 */
+select::-ms-expand { display: none; }
+
+address { font-style: normal; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* =================== typo =================== */
+
+@font-face {
+  font-family: "gmarket";
+  font-weight: 600;
+  src: local("GmarketSansBold bold"), local("GmarketSansBold bold"), url("../fonts/GmarketSansTTFBold.woff") format("woff"), url("../fonts/GmarketSansTTFBold.ttf") format("truetype"), url("../fonts/GmarketSansBold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "gmarket";
+  font-weight: 500;
+  src: local("GmarketSansBold Medium"), local("GmarketSansBold Medium"), url("../fonts/GmarketSansTTFMedium.woff") format("woff"), url("../fonts/GmarketSansTTFMedium.ttf") format("truetype"), url("../fonts/GmarketSansMedium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "gmarket";
+  font-weight: 300;
+  src: local("GmarketSansBold light"), local("GmarketSansBold Light"), url("../fonts/GmarketSansTTFLight.woff") format("woff"), url("../fonts/GmarketSansTTFLight.ttf") format("truetype"), url("../fonts/GmarketSansLight.otf") format("opentype");
+}
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =================== helper =================== */
+.inner{width: 1172px;margin: 0 auto;}
+.none { display: none; }
+.is-mon { font-family: "Montserrat", sans-serif; }
+.is-gma { font-family: "gmarket", sans-serif; }
+.hidden, .blind, .hd-element {display: block;overflow: hidden;position: absolute;left: -9999999999999999px;top: -999999px;width: 0;height: 0;font-size: 1px;}
+
+@media all and (max-width: 900px) { .is-tab-show { display: block; } }
+
+@media all and (max-width: 900px) { .is-tab-hide { display: none; } }
+
+.is-mo-show { display: none; }
+
+@media all and (max-width: 600px) { .is-mo-show { display: block; } }
+
+@media all and (max-width: 600px) { .is-mo-hide { display: none; } }
+
+.is-mo-sm-show { display: none; }
+
+@media all and (max-width: 360px) { .is-mo-sm-show { display: block; } }
+
+@media all and (max-width: 360px) { .is-mo-sm-hide { display: none; } }
+
+.is-mo-xsm-show { display: none; }
+
+@media all and (max-width: 320px) { .is-mo-xsm-show { display: block; } }
+
+@media all and (max-width: 320px) { .is-mo-xsm-hide { display: none; } }
+
+
