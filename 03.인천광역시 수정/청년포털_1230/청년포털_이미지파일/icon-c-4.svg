@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+  <g id="icon-c-4" transform="translate(-1092 -966)">
+    <g id="타원_13" data-name="타원 13" transform="translate(1092 966)" fill="#fff" stroke="#d5d5d5" stroke-width="1">
+      <circle cx="22.5" cy="22.5" r="22.5" stroke="none"/>
+      <circle cx="22.5" cy="22.5" r="22" fill="none"/>
+    </g>
+    <g id="그룹_27" data-name="그룹 27" transform="translate(1101 977)">
+      <g id="그룹_33" data-name="그룹 33" transform="translate(0 0)">
+        <path id="패스_7" data-name="패스 7" d="M24.6,91.3H2.98A2.98,2.98,0,0,1,0,88.317v-14.6H27.584v14.6A2.98,2.98,0,0,1,24.6,91.3" transform="translate(0 -69.061)" fill="#e0e6ee"/>
+        <path id="패스_8" data-name="패스 8" d="M27.584,4.65H0V1.693A1.694,1.694,0,0,1,1.694,0h24.2a1.7,1.7,0,0,1,1.695,1.694Z" transform="translate(0 0.001)" fill="#0070bd"/>
+        <path id="패스_9" data-name="패스 9" d="M29.994,23.933h0A.933.933,0,1,1,30.927,23a.933.933,0,0,1-.933.933" transform="translate(-27.227 -20.675)" fill="#ff762d"/>
+        <path id="패스_10" data-name="패스 10" d="M70.844,23.933h0A.933.933,0,1,1,71.777,23a.933.933,0,0,1-.933.933" transform="translate(-65.5 -20.675)" fill="#fff"/>
+        <path id="패스_11" data-name="패스 11" d="M93.808,123.6H92.639a.42.42,0,1,1,0-.839h1.169a.42.42,0,0,1,0,.839" transform="translate(-86.4 -115.016)" fill="#0070bd"/>
+        <path id="패스_12" data-name="패스 12" d="M164.416,123.6H152.883a.42.42,0,0,1,0-.839h11.534a.42.42,0,1,1,0,.839" transform="translate(-142.843 -115.016)" fill="#0070bd"/>
+        <path id="패스_13" data-name="패스 13" d="M94.211,174.43H89.024a.42.42,0,1,1,0-.839h5.187a.42.42,0,1,1,0,.839" transform="translate(-83.013 -162.638)" fill="#0070bd"/>
+        <path id="패스_14" data-name="패스 14" d="M208.566,174.43h-2.109a.42.42,0,1,1,0-.839h2.109a.42.42,0,1,1,0,.839" transform="translate(-193.037 -162.638)" fill="#0070bd"/>
+        <path id="패스_15" data-name="패스 15" d="M281.066,174.43h-3.678a.42.42,0,0,1,0-.839h3.678a.42.42,0,1,1,0,.839" transform="translate(-259.493 -162.638)" fill="#0070bd"/>
+        <path id="패스_16" data-name="패스 16" d="M159.318,241.262h-5.439a1.455,1.455,0,1,1,0-2.909h5.439a1.455,1.455,0,1,1,0,2.909" transform="translate(-142.806 -223.313)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

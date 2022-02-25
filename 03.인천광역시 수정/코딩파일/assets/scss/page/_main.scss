@@ -1,0 +1,273 @@
+.field-main-wrap {
+  margin-top: 2.5rem;
+  padding-bottom: 1.75rem;
+}
+
+// 알림존,대상별 청년정책
+.field-main-wrap-top {
+  &__right {
+    ul {
+      li {
+        display: flex;
+        height: 5.2188rem;
+        margin-bottom: 0.5313rem;
+        border: 0.0625rem solid #d5d5d5;
+
+        &:hover{
+          border: 0.125rem solid #0070BD;
+          .lef{
+            background: #0070BD;
+            border-right: 0.0625rem solid #0070BD;
+            span{color: #fff!important;}
+          }
+          .txt-list{
+            background: #EDF3F7!important;
+            @extend %hover-shadow;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        .lef {
+          flex: 1 1 10.125rem;
+          background: #f3f3f3;
+          border-right: 0.0625rem solid #d5d5d5;
+          padding-left: 1rem;
+          display: flex;
+          align-items: center;
+
+          .tit {
+            display: flex;
+            align-items: center;
+
+            img{
+              width: 1.75rem; height: 1.75rem;
+              object-fit: cover;
+            }
+
+            span {
+              margin-left: 0.5rem;
+              font-size: 1.125rem;
+              color: #333333;
+              font-weight: 500;
+            }
+          }
+        }
+
+        .ref {
+          flex: 1 1 75%;
+          height: 100%;
+
+          .txt-list {
+            padding-left: 1.125rem;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+            a {
+              position: relative;
+              display: inline-block;
+              font-size: 0.9375rem;
+              color: #333333;
+              margin-right: 1rem;
+
+              &:hover {
+                font-weight: bold;
+                text-decoration: underline;
+                text-underline-position: under;
+              }
+              &:last-of-type {
+                margin-right: 0;
+              }
+              &:last-of-type::after {
+                display: none;
+              }
+
+              @include make-after {
+                @include poa-y-center;
+                right: -0.5rem;
+                width: 0.0625rem;
+                height: 0.875rem;
+                background: #a2a2a2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &__left{
+    position: relative;
+  }
+}
+
+// 공지사항,인천시 대표정책
+.field-main-wrap__mid{
+  margin-top: 2.8125rem;
+
+  .flex-w33>div{
+    margin: 0 0.25rem;
+  }
+
+  &__right{
+    .flex-w33{
+      margin: 0 -0.25rem;
+    }
+    .poa-y-center{
+      height: 11.75rem; background: #D6F8F7;
+      
+      &:nth-of-type(2){
+        background: #D1F9CD!important;
+        .bar{background: #9BD495!important;}
+        p{color: #4B7946!important;}
+      }
+      &:nth-of-type(3){
+        background: #DBDFFF!important;
+        .bar{background: #9CA3E1!important;}
+        p{color: #2C3476!important;};
+      }
+    }
+
+    .text-center{
+      width: 100%; 
+      img{
+        display: inline-block; margin-bottom: 1.0625rem;
+        width: 3.5rem; height: 3.5rem; object-fit: cover;
+      }
+      .bar{width: 9.9375rem;height: 0.125rem;background: #93D2D1;margin-bottom: 0.75rem;}
+      p{font-size: 1.25rem;font-weight: 500;color: #00676A; line-height: 1.3; min-height: 3.25rem;
+      display: flex;align-items: center;justify-content: center;}
+    }
+
+      .flex-all-center{
+        top: 0;
+        transition: all 0.4s;
+        &:hover{
+          @extend %fade-in-up;
+          @extend %hover-shadow;
+        }
+    }
+  }
+}
+
+// 메인배너
+.field-main-wrap-bot{
+  margin-top: 2.5rem;
+  &__list{
+    margin: 0 -0.5rem!important;
+  }
+  &__item{
+    margin: 0 0.25rem!important;
+    height: 4.0625rem; background: #fff;
+    border: 0.0625rem solid #D5D5D5; border-radius: 0.3125rem;
+    transition: all 0.4s; top: 0;
+
+    &:hover{
+      @extend %hover-shadow;
+      @extend %fade-in-up;
+      background: #EFEFEF;
+    }
+  }
+  &__link{
+    display: flex;
+    align-items: center;
+  }
+  &__icon{
+    display: inline-block; margin-right: 0.4375rem;
+    img{
+
+    }
+  }
+  &__txt{
+    font-size: 1rem; font-weight: 500; color: #333333;
+
+    &.let{
+      letter-spacing: -0.125rem;
+    }
+  }
+}
+
+
+body{
+  min-height: 187.5rem;
+}
+
+.inner{
+  max-width: 73.125rem;
+    margin: 0 auto;
+}
+
+.bot-banner{
+  padding: 1.5625rem 0;
+  background: #EFEFEF;
+  &__wrap{
+    background: #fff;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 20%;
+    max-width: 20%;
+  }
+  &__link{}
+  &__logo{
+    img{
+      display: inline-block;
+      width: 13.125rem; height: 3.75rem;
+      object-fit: cover;;
+    }
+  }
+}
+
+
+@media (max-width:1200px){
+  html{
+    font-size: 15px;
+  }
+  html,body{
+    overflow-x: hidden;
+  }
+  .inner{padding: 0 10px;}
+}
+
+@media (max-width:900px){
+  html{
+    font-size: 14px;
+  }
+  .flex-w50{flex-direction: column;display: block;}
+  .banner__img a{display: block;}
+  .banner__img img{height: auto;}
+  .flex-w50 > *{flex: 1 1 100%;max-width: 100%;}
+  .field-main-wrap-top__left,.field-main-wrap__mid__left{margin-bottom: 2rem;}
+  .flex-w20{flex-wrap:wrap}
+  .flex-w20 > *{flex: 1 1 32.1%;max-width: 32.1%;}
+  .field-main-wrap-bot__item{margin-bottom: 0.5rem!important;}
+  .bot-banner__item{width: 50%;max-width: 50%;text-align: center;}
+}
+
+@media (max-width:600px){
+  html{
+    font-size: 13px;
+  }
+  .flex-w20 > *{flex: 1 1 48.2%;max-width: 48.2%;}
+  .bot-banner__item{ flex: 1 1 46.2%;max-width: 46.2%;}
+  .notice-list__link{max-width: 21rem;}
+  .field-main-wrap-top__right ul li .lef .tit span{font-size: 1rem;}
+  .field-main-wrap-top__right ul li .ref .txt-list a{text-align: center;line-height: 1.3;}
+}
+
+@media (max-width:400px){
+  .flex-w20 > *{flex: 1 1 100%;max-width: 100%;}
+  .bot-banner__item{ flex: 1 1 42%;max-width: 42%;margin-bottom: 0.5rem;}
+  .flex-w33{flex-wrap: wrap;}
+  .flex-w33 > *{flex: 1 1 100%;max-width: 100%;}
+  .field-main-wrap__mid .flex-w33 > div{margin-bottom: 0.5rem;}
+  .field-main-wrap__mid__right .poa-y-center{height: 7.75rem;}
+  .field-main-wrap__mid__right .text-center img{width: 2.5rem;height: 2.5rem;margin-bottom: 0.5rem;}
+  .field-main-wrap__mid__right .text-center .bar{margin-bottom: 0;}
+}

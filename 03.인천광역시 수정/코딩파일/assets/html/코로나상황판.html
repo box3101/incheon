@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>인천시 일상회복 지원금</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=10.0,user-scalable=yes" />
+  <!-- favicon&icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="./img/favicon/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#0070bd">
+  <link rel="shortcut icon" href="./img/favicon/favicon.ico">
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="./img/favicon/mstile-144x144.png">
+  <meta name="msapplication-config" content="./img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <meta property="og:title" content="인천광역시청 인트로 페이지" />
+  <meta property="og:description" content="인천시 일상회복 지원금 , 자주묻는질문, 일상회복 지원금 신청하기, 인천광역시 홈페이지" />
+  <!-- ! TODO: meta thumbnail 설정 -->
+  <!-- <meta property="og:image" content="/assets/images/favicon/*.png"> -->
+  <!-- Twitter -->
+  <meta property="twitter:url" content="/" />
+  <meta property="twitter:title" content="인천광역시청 인트로 페이지" />
+  <meta property="twitter:description" content="인천시 일상회복 지원금,  자주묻는질문, 일상회복 지원금 신청하기, 인천광역시 홈페이지" />
+
+  <!-- END Open Graph -->
+
+  <!-- 번호 회색으로 되는거 방지 -->
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- link css -->
+  <link rel="stylesheet" href="../css/common.css">
+
+  <!-- link js -->
+  <script src="./js/jquery.js"></script>
+
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <!-- 메인이 들어가는 부분 -->
+  <main class="main-wrap" id="faq">
+
+    <div class="sub-header">
+      <img src="../img/com-header.png" alt="" style="width: 100%;">
+    </div>
+
+    <div class="main inner" style="width: 100%;">
+      <div class="main__right" style="width: 100%;flex:0 0 100%">
+
+        <main id="content" class="content" style="width: 100%;">
+
+          <!-- content-head-->
+          <div class="content-head">
+            <!-- content-title -->
+            <div class="content-title-wrap">
+              <h3 class="content-title">
+                청년정책비전</h3>
+            </div>
+            <!-- //content-title -->
+          </div>
+
+          <!-- content-body -->
+          <div class="content-body">
+            <script class="daum_roughmap_loader_script"
+              src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+            <script charset="UTF-8"
+              src="https://t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/c6dc0bd8/roughmapLander.js"></script>
+
+            <!-- start article -->
+            <div class="article-content-wrap">
+              <!-- 롤링이미지 -->
+              <!-- 콘텐츠 본문 -->
+              <div class="post-content">
+                <section class="section4">
+
+                  <div class="add-section" style="border: 1px solid #aaa;margin-top: 1rem;">
+                    <div class="add_box" style="padding: 1rem;padding-top: 1.5rem;padding-bottom: 0;">
+                      <p class="tit" style="text-align: center; color: #0272bf;font-weight: 600;font-size: 1.5rem;margin-bottom: 1rem;">확진환자의 이동경로 등 정보공개 안내</p>
+                      <p class="txt" style="font-size: 1.1rem;color: #666;letter-spacing: -1px;">
+                        「확진환자의 이동경로 등 정보공개 지침(1판)」에 따라 확진환자의 성별, 연령, 국적, 거주지(읍면동 단위 이하) 등 <strong>개인을 특정하는 정보는 공개되지 않습니다.</strong>
+                      </p>
+                      <p class="txt2" style="font-size: 1.1rem;padding-left: 1rem;color: #666;letter-spacing: -0.3px;">
+                        - 시간에 따른 개인별 동선을 공개하지 않고,<strong>장소목록 형태로 지역(시도, 시군구), 장소·유형, 상호명, 주소, 노출일시, 소독여부 정보를 공개함</strong>
+                      </p>
+
+                      <div class="btn-wrap ac">
+                        <a download="" href="/comm/getFile?srvcId=MEDIA&upperNo=104280&fileTy=MEDIA&fileNo=1 " target="_blank" title="새창" class="btn btn-basic btn-primary btn-download"><span>확진환자의 이동경로 등 정보공개 지침 자세히보기</span></a>
+                      </div>
+                    </div>
+                  </div>
+
+                </section>
+              </div>
+            </div>
+            <!-- end article -->
+
+            <script>
+              $(function () {
+                $.each($("[id^=daumRoughmapContainer]"), function (idx, jEl) {
+                  var dataObj = $(jEl).data();
+
+                  if (typeof dataObj != "undefined" && typeof dataObj.timestamp != "undefined" && typeof dataObj.key != "undefined") {
+                    new daum.roughmap.Lander({
+                      "timestamp": dataObj.timestamp,
+                      "key": dataObj.key
+                    }).render();
+                  }
+                });
+              });
+            </script>
+          </div>
+          <!-- //content-body -->
+
+        </main>
+      </div>
+    </div>
+
+
+  </main>
+  <!-- 메인이 들어가는 부분 eee -->
+
+
+  <script>
+    (function () {
+
+
+      var faqDl = $(".faq-section");
+      var faqDt = $(".faq-section dt");
+      var faqDd = $(".faq-section dd");
+
+      // 첫번째 활성화
+      faqDl.eq(0).children("dd").slideDown(500);
+      faqDl.eq(0).addClass("is-active");
+
+      // 활성화 되었을때 클릭
+      function dlCheck($this) {
+        $this.parent("dl").removeClass("is-active");
+        $this.siblings("dd").slideUp(500);
+      }
+
+      // 활성화 안되었을때 클릭
+      function dlCheckOff($this) {
+        faqDl.children("dd").slideUp(500);
+        faqDl.removeClass("is-active");
+        $this.siblings("dd").slideDown(500);
+        $this.parent("dl").addClass("is-active");
+      }
+
+      faqDt.on("click", function () {
+
+        var $this = $(this);
+        var checkOn = $this.parent("dl").hasClass("is-active");
+
+
+        if (checkOn) {
+          dlCheck($this);
+        } else {
+          dlCheckOff($this);
+        }
+
+      });
+
+
+
+    })();
+  </script>
+
+</body>
+
+</html>
